@@ -1,7 +1,8 @@
 import React from 'react';
 
 // import { Panel, Form, Col, FormGroup, FormControl, ControlLabel, Checkbox, Radio, Button } from 'react-bootstrap';
-import { Well, Tabs, Tab } from 'react-bootstrap';
+// import { Well, Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap-tabs';
 
 import JqxTree     from '../../lib/jqwidgets-react/react_jqxtree.js';
 import JqxSplitter from '../../lib/jqwidgets-react/react_jqxsplitter.js';
@@ -9,13 +10,16 @@ import JqxExpander from '../../lib/jqwidgets-react/react_jqxexpander.js';
 import JqxListBox  from '../../lib/jqwidgets-react/react_jqxlistbox.js';
 import JqxPanel    from '../../lib/jqwidgets-react/react_jqxpanel.js';
 
+// this may replace JqxSplitter
+// import SplitPane from '../../lib/SplitPane';
+
 import AboutTabListDetail from './aboutTabListDetail';
 import ListFilter   from './listFilter';
 import ListRbsGrid  from './listRbsGrid';
-import ListRbsTable0 from './listRbsTable0';
+// import ListRbsTable0 from './listRbsTable0';
 import ListRbsTable from './listRbsTable';
 import ListJqxTable from './listJqxTable';
-import LogEdit      from './logEdit';
+// import LogEdit      from './logEdit';
 import Grid    from '../timetravel/Grid'; // import LogSearch from './logSearch';
 
 const ListDetailMain = () => (
@@ -27,33 +31,35 @@ const ListDetailMain = () => (
           {/* tab bsStyle = tabs (default)/pills (blue button) */}
           <div>
 
-                <Tabs defaultActiveKey={1} id='uncontrolled-tab' bsStyle='tabs' bsSize='xsmall'>
+                <Tabs>
 
-                    <Tab eventKey={1} title='About'>
+                    <Tab label='About'>
                         <AboutTabListDetail />
                     </Tab>
 
-                    <Tab eventKey={2} title='Rbs-Grid'>
+                    <Tab label='Rbs-Grid'>
                         {/* <ListFilter /> */}
                         <ListRbsGrid />
                     </Tab>
 
-                    <Tab eventKey={9} title='Rbs-Table0'>
-                        <ListFilter />
-                        <ListRbsTable0 />
+                    <Tab label='Rbs-Table0'>
+                        ListRbsTable0
+                        {/*<ListFilter />
+                        <ListRbsTable0 />*/}
                     </Tab>
 
-                    <Tab eventKey={3} title='Rbs-Table'>
-                        <ListRbsTable />
+                    <Tab label='Rbs-Table'>
+                        <ListRbsTable /> 
                     </Tab>
 
-                    <Tab eventKey={4} title='JqxTable'>
+                    <Tab label='JqxTable'>
                         {/* <ListFilter /> */}
                         <ListJqxTable />
                     </Tab>
 
-                    <Tab eventKey={5} title='10*10'>
-                        <Grid /> {/* <LogSearch /> */}
+                    <Tab label='10*10'>
+                        10*10
+                        {/*<Grid />*/} {/* <LogSearch /> */}
                     </Tab>
                 </Tabs>
 
@@ -63,7 +69,17 @@ const ListDetailMain = () => (
           <div>
 
              {/* <LogEdit /> */}
-
+<Tabs>
+  <Tab label='Tab 1'>
+    Tab 1 content
+  </Tab>
+  <Tab label='Tab 2'>
+    Tab 2 content
+  </Tab>
+  <Tab label='Tab 3' disabled>
+    Tab 3 content
+  </Tab>
+</Tabs>;
           </div>
       </JqxSplitter>
 );

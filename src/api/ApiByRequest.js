@@ -1,4 +1,4 @@
-export const REQUEST_LOGS_URL = 'http://localhost:8080/logs';
+export const REQUEST_LOGS_URL = 'http://localhost:8020/jpaRest/getAllEmp';
 
 // fetch("/login", {
 //   method: "POST",

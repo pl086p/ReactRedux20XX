@@ -56,9 +56,9 @@ const ListRbTable = ({actions, listState}) => {
   filteredLogs = filteredLogs.filter(function(e) { return (e.logType === listState.logType || listState.logType === 'ALL'); });
 
   // load logs to state logsFromAPI from API calling on the first time component loading
-  if (listState.toLoadLogsFromAPI) {
-    loadLogsData();
-  };
+  //if (listState.toLoadLogsFromAPI) {
+  //  loadLogsData();
+  //};
 
   //if (listState.toLoadCustsFromAPI) {
   //  loadCustomersData();

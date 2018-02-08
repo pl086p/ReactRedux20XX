@@ -1,6 +1,6 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
-import SplitPane from 'react-split-pane';
+import  SplitPane from 'react-split-pane';
 
 
 const Home = () => {
